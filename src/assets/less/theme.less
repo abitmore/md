@@ -1,35 +1,13 @@
-@nightBgColor: #333333;
-@nightPreviewColor: #1e1e1e;
-@nightHeaderColor: #3c3c3c;
-@nightCodeMirrorColor: #1e1e1e;
+@nightPreviewColor: #191919;
+@nightCodeMirrorColor: #191919;
 @nightActiveCodeMirrorColor: gray;
 @nightFontColor: gray;
 @nightLinkColor: #8e9eb9;
 @nightLinkTextColor: #84868b;
-@nightWhiteColor: #f0f0f0;
-@nightButtonBg: #1e1e1e;
-@nightButtonHoverColor: #84868b;
 @nightLineColor: #84868b;
 
 .dark {
   .container {
-    background-color: @nightBgColor;
-
-    .CodeMirror {
-      caret-color: @nightFontColor;
-      color: @nightFontColor;
-      background-color: @nightCodeMirrorColor;
-      box-shadow: inset 0 0 0 1px rgba(100, 37, 37, 0.102);
-
-      .CodeMirror-cursor {
-        border-left: 1px solid @nightLineColor;
-      }
-
-      .CodeMirror-activeline-background {
-        background-color: #3e3e3e!important;
-      }
-    }
-
     .output_night {
       .preview {
         background-color: @nightPreviewColor;
@@ -46,28 +24,6 @@
       }
     }
 
-    .cm-s-style-mirror .CodeMirror-matchingbracket {
-      color: @nightWhiteColor !important;
-      background: rgb(30, 30, 30) !important;
-    }
-
-    .cm-s-xq-light span.cm-variable-2,
-    .cm-s-style-mirror span.cm-tag {
-      color: @nightFontColor;
-    }
-
-    .cm-s-xq-light .CodeMirror-activeline-background {
-      background-color: transparent;
-    }
-
-    .cm-s-xq-light span.cm-string {
-      color: @nightLinkColor;
-    }
-
-    .cm-s-xq-light span.cm-link {
-      color: @nightLinkTextColor;
-    }
-
     ::-webkit-scrollbar {
       background-color: @nightCodeMirrorColor;
     }
@@ -77,7 +33,6 @@
 .CodeMirror {
   padding-bottom: 0;
   height: 100% !important;
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
   font-size: 14px;
   font-family: 'PingFang SC', BlinkMacSystemFont, Roboto, 'Helvetica Neue',
     sans-serif !important;
@@ -102,4 +57,12 @@
   padding-top: 20px;
   padding-bottom: 20px;
   box-sizing: border-box;
+}
+
+.cm-em {
+  font-style: normal;
+}
+
+.cm-comment {
+  font-style: normal !important;
 }
